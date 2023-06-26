@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<%- include("./partials/head.ejs") %>
+		<link rel="stylesheet" href="/styles/manga.css">
+</head>
+
+<body>
+	<%- include("./partials/header.ejs") %>>
+		<div class="mangaElement">
+			<div class="container">
+				<div class="mangaElement__container">
+					<div class="mangaElement__row1">
+						<div class="row1__content">
+							<div class="row1__card">
+								<img src="<%= mangaElement.image %>" alt="">
+							</div>
+							<a href="#" class="row1__read btn">ЧИТАТЬ</a>
+							<a href="#" class="row1__addBookmark btn">ДОБАВИТЬ В ЗАКЛАДКИ</a>
+						</div>
+					</div>
+					<div class="mangaElement__row2">
+						<div class="row2__head">
+							<span class="row2__subtitle">
+								<%= mangaElement.title.englishName %> /
+									<%= mangaElement.title.otherName %>
+							</span>
+							<h3>
+								<%= mangaElement.title.russianName %><span>[<%= mangaElement.status %>]</span>
+							</h3>
+							<div class="row2__rating">
+								<div class="rating__type">
+									<%= mangaElement.typeManga %>
+								</div>
+								<div class="rating__year">
+									<%= mangaElement.year %>
+								</div>
+							</div>
+						</div>
+						<div class="row2__content">
+							<div class="row2__description">
+								<ul class="row2__menu">
+									<li>ОПИСАНИЕ<a href="/manga/<%= mangaElement.id%>"></a></li>
+									<li class="row2__link">ГЛАВЫ<a></a></li>
+								</ul>
+								<div class="row2__chapters">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+
+</html>

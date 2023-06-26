@@ -1,0 +1,199 @@
+body {
+  width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.card {
+  position: relative;
+  width: 144px !important;
+  height: 310px;
+  text-align: center;
+}
+.card__img {
+  width: 100%;
+  height: 216px;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+}
+.card__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.5rem;
+}
+.card__type {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+  color: hsla(0, 0%, 100%, 0.64);
+}
+.card__title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: 100%;
+  height: 1.9rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.card__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.recommen {
+  width: 100vw;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 80px 0 10px;
+  background-color: #121212;
+}
+.recommen__container {
+  width: 100%;
+  height: 100%;
+}
+.recommen__cards {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 0.8rem;
+  width: -moz-max-content !important;
+  width: max-content !important;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.hotnews {
+  padding: 1.2rem 0;
+  background-color: rgb(23, 23, 23);
+}
+.hotnews__container {
+  overflow-x: hidden;
+}
+.hotnews__cards {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 0.8rem;
+  width: -moz-max-content !important;
+  width: max-content !important;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.content {
+  background-color: #121212;
+  padding: 50px 0;
+  min-height: 100vh;
+}
+.content__container {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  gap: 0.8rem;
+}
+.content__latestupdates .latestupdates__cards {
+  display: grid;
+  gap: 1.6rem;
+}
+.content__latestupdates .latestupdates__cards .latestupdates__card {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: max-content max-content;
+  -moz-column-gap: 1.2rem;
+       column-gap: 1.2rem;
+  border-bottom: 1px solid hsla(0, 0%, 59%, 0.1);
+}
+.content__latestupdates .latestupdates__cards .latestupdates__card .card__img {
+  grid-row: span 2;
+  height: 96px;
+  width: 64px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.content__latestupdates .latestupdates__cards .latestupdates__card .card__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.content__latestupdates .latestupdates__cards .latestupdates__card .card__title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: 100%;
+  height: 1.9rem;
+  cursor: pointer;
+}
+.content__aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.content__populartoday .populartoday__cards {
+  display: grid;
+  gap: 1.6rem;
+}
+.content__populartoday .populartoday__cards .populartoday__card {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: max-content max-content;
+  -moz-column-gap: 1.2rem;
+       column-gap: 1.2rem;
+}
+.content__populartoday .populartoday__cards .populartoday__card div {
+  grid-row: span 2;
+  height: 96px;
+  width: 64px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.content__populartoday .populartoday__cards .populartoday__card div img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.content__populartoday .populartoday__cards .populartoday__card h5 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: 100%;
+  height: 1.9rem;
+  cursor: pointer;
+}
+.content__like .like__cards {
+  display: grid;
+  gap: 1.6rem;
+}
+.content__like .like__cards .like__card {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: max-content max-content;
+  -moz-column-gap: 1.2rem;
+       column-gap: 1.2rem;
+}
+.content__like .like__cards .like__card div {
+  grid-row: span 2;
+  height: 96px;
+  width: 64px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.content__like .like__cards .like__card div img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.content__like .like__cards .like__card h5 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: 100%;
+  height: 1.9rem;
+  cursor: pointer;
+}

@@ -1,0 +1,104 @@
+body {
+  background-color: #121212;
+}
+
+.mangaElement {
+  padding: 80px 0;
+}
+.mangaElement__container {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+}
+.mangaElement__row1 {
+  padding: 1rem 0;
+}
+.mangaElement__row1 .row1__content {
+  width: 250px;
+}
+.mangaElement__row1 .row1__content .row1__card {
+  margin-bottom: 0.7rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.mangaElement__row2 .row2__head {
+  padding: 1.6rem 0.4rem 0.6rem 1.8rem;
+}
+.mangaElement__row2 .row2__head .row2__subtitle {
+  display: block;
+  margin-bottom: 0.3em;
+  font-size: 0.75rem;
+  color: hsla(0, 0%, 100%, 0.64);
+}
+.mangaElement__row2 .row2__head h3 {
+  margin-bottom: 0.3em;
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+.mangaElement__row2 .row2__head h3 span {
+  margin-left: 0.4rem;
+  color: hsla(0, 0%, 100%, 0.64);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.mangaElement__row2 .row2__head .row2__rating {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: hsla(0, 0%, 100%, 0.64);
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  vertical-align: middle;
+}
+.mangaElement__row2 .row2__content {
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  padding: 1rem 1.8rem 1.4rem;
+}
+.mangaElement__row2 .row2__content .row2__menu {
+  display: flex;
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  margin-bottom: 1rem;
+  font-size: 0.6rem;
+}
+.mangaElement__row2 .row2__content .row2__menu li {
+  position: relative;
+  padding: 0.4rem 0.7rem;
+  color: #f5f5f5;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  text-align: center;
+}
+.mangaElement__row2 .row2__content .row2__menu li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(128, 128, 128, 0.1);
+  transition: all 0.2s ease;
+}
+.mangaElement__row2 .row2__content .row2__menu li:hover::before {
+  opacity: 1;
+}
+.mangaElement__row2 .row2__content .row2__menu a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  cursor: pointer;
+}
+.mangaElement__row2 .row2__content .row2__menu .row2__link {
+  border-bottom: 2px solid #1976d2;
+  color: #1976d2;
+}
+.mangaElement__row2 .row2__content .row2__text {
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.6;
+}

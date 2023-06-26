@@ -1,0 +1,135 @@
+$bg-header: #171717;
+$cl-text-gray: hsla(0, 0%, 100%, 0.64);
+$cl-foot-hover: #1976d2;
+$text-primary: #f5f5f5;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  font-size: 0.6rem;
+  color: $text-primary;
+  background-color: $bg-header;
+  z-index: 9;
+  .container {
+    height: 100%;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+  }
+  &__logo {
+    display: grid;
+    align-items: center;
+    a {
+      padding: 4px;
+      border-radius: 0.5rem;
+      transition: all 0.5 ease;
+    }
+    a:hover {
+      background-color: rgba(255, 255, 255, 0.096);
+    }
+  }
+  &__menu {
+    height: 100%;
+  }
+  &__search {
+    svg {
+      margin-right: 0.4rem;
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+  &__row2 {
+    position: relative;
+    gap: 0;
+    .header__list {
+      li:last-of-type {
+        display: none;
+      }
+    }
+  }
+  &__setting {
+    padding: 0.4rem;
+  }
+  .setting__svg:hover {
+    fill: #1976d2;
+  }
+  &__profile {
+    .profile__img {
+      display: none;
+      width: 40px;
+      height: 40px;
+      padding: 0.4rem;
+      border-radius: 50%;
+    }
+  }
+  .profile__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem 1rem;
+    color: #fff;
+    background-color: #1976d2;
+    border: none;
+    border-radius: 1.2rem;
+    cursor: pointer;
+  }
+  .profile__btn:active {
+    transform: scale(0.9);
+  }
+  &__switchTheme {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 20px;
+    background-color: black;
+    border-radius: 1rem;
+    input {
+      position: absolute;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: inherit;
+      height: inherit;
+      transition: 0.4s;
+      cursor: pointer;
+    }
+    span::before {
+      position: absolute;
+      content: "";
+      height: 17px;
+      width: 17px;
+      top: 1px;
+      right: 2px;
+      background-color: gray;
+      transition: 0.4s;
+      border-radius: 1rem;
+    }
+
+    input:checked + span::before {
+      transform: translateX(-19px);
+      background-color: white;
+    }
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}

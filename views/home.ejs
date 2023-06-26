@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <%- include("./partials/head.ejs") %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/styles/home.css">
+</head>
+
+<body>
+  <%- include("./partials/header.ejs") %>
+    <main>
+      <section class="recommen">
+        <div class="recommen__container mySwiper">
+          <div class="recommen__cards swiper-wrapper">
+
+          </div>
+        </div>
+      </section>
+      <section class="hotnews">
+        <div class="container">
+          <div class="hotnews__container mySwiper2">
+            <h2 class="hotnews__title title">Горячие новинки</h2>
+            <div class="hotnews__cards swiper-wrapper"></div>
+          </div>
+        </div>
+      </section>
+      <section class="content">
+        <div class="container">
+          <div class="content__container">
+            <div class="content__latestupdates">
+              <h2 class="latestupdates__title title">Последние обновления</h2>
+              <div class="latestupdates__cards"></div>
+            </div>
+            <div class="content__aside">
+              <div class="content__populartoday">
+                <h2 class="populartoday__title title">Popular today</h2>
+                <div class="populartoday__cards">
+
+                </div>
+              </div>
+              <div class="content__like">
+                <h2 class="like__title title">You'll like it</h2>
+                <div class="like__cards">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="/scripts/home.js"></script>
+
+</body>
+
+</html>
