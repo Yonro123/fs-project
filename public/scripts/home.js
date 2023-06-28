@@ -40,10 +40,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Recommended section
 	const recommendedCards = document.querySelector(".recommen__cards");
-	getManga().then(async (manga) => {
-		await drawMangaCardSwiper(recommendedCards, manga, "recommen__card card");
+	getManga().then((manga) => {
+		drawMangaCardSwiper(recommendedCards, manga, "recommen__card card");
 		const swiper = new Swiper(".mySwiper", {
-			slidesPerView: 8.7,
+			slidesPerView: 11,
 			freeMode: true,
 		});
 	});

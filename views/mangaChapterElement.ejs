@@ -44,10 +44,29 @@
 						<div class="row2__content">
 							<div class="row2__description">
 								<ul class="row2__menu">
-									<li>ОПИСАНИЕ<a href="/manga/<%= mangaElement.id%>"></a></li>
+									<li>ОПИСАНИЕ<a href="/manga/<%= mangaElement.id %>"></a></li>
 									<li class="row2__link">ГЛАВЫ<a></a></li>
 								</ul>
 								<div class="row2__chapters">
+									<ul class="chapters__list">
+										<% for (let i=0; i < chapters.length; i++) { %>
+											<li>
+												<div class="list__name">
+													<span class="volume">
+														<%= chapters[i].volume %>
+													</span>
+													<p class="name">
+														Глава
+														<%= chapters[i].chapterNum %>
+													</p>
+												</div>
+												<div class="list__create">
+													<%= chapters[i].createChapter %>
+												</div>
+												<a href="chapter?c=<%= chapters[i].chapterNum %>&page=1" class="btnWrapper"></a>
+											</li>
+											<% } %>
+									</ul>
 								</div>
 							</div>
 						</div>

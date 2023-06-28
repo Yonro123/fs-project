@@ -18,13 +18,32 @@ router.get("/all", async (req, res) => {
 				russianName: 1,
 			},
 			image: 1,
-			content: 1,
 			typeManga: 1,
 			year: 1,
 		}
 	);
 
 	res.status(200).json(manga);
+});
+router.get("/:itemId", async (req, res) => {
+	const { itemId } = req.params;
+
+	const mangaElement = await Manga.findOne({ _id: itemId });
+
+	res.status(200).json(mangaElement);
+});
+router.get("/:itemId/chapters", async (req, res) => {
+	const { itemId } = req.params;
+	const chapters = await Chapter.findOne(
+		{ idManga: itemId },
+		{
+			chapters: {
+				chapterImage: 0,
+			},
+		}
+	).populate("idManga");
+
+	res.status(200).json(chapters);
 });
 router.post("/", async (req, res) => {
 	try {
@@ -49,17 +68,22 @@ router.post("/", async (req, res) => {
 router.post("/:itemId/chapters", async (req, res) => {
 	try {
 		const { itemId } = req.params;
-		const { chapterName, chapterImage } = req.body || {};
+		const { chapterNum, chapterImage } = req.body || {};
 
 		const chapters = await Chapter.findOne({ idManga: itemId });
-		console.log(chapters);
+		const date = new Date();
+		const createChapter = `${date.getDate()}/${
+			date.getMonth() < 10 ? `0${date.getMonth() + 1}` : date.getMonth()
+		}/${date.getFullYear()}`;
+
 		if (chapters === null) {
 			const newChapter = new Chapter({
 				idManga: itemId,
 				chapters: [
 					{
-						chapterName,
+						chapterNum,
 						chapterImage,
+						createChapter,
 					},
 				],
 			});
@@ -67,8 +91,9 @@ router.post("/:itemId/chapters", async (req, res) => {
 			await newChapter.save();
 		} else {
 			chapters.chapters.push({
-				chapterName,
+				chapterNum,
 				chapterImage,
+				createChapter,
 			});
 			await chapters.save();
 		}

@@ -4,6 +4,7 @@ import path from "path";
 
 import mangaRouter from "./routes/manga.js";
 import viewsRouter from "./routes/views.js";
+import usersRouter from "./routes/users.js";
 
 const PORT = 8080;
 const mongoURL =
@@ -30,6 +31,7 @@ app.use("/", viewsRouter);
 
 // Apies
 app.use("/api/manga", mangaRouter);
+app.use("/api/users", usersRouter);
 
 app.listen(8080, () => {
 	console.log(`Server is running on port: ${PORT}...`);
