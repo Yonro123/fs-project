@@ -101,5 +101,35 @@ body {
 				line-height: 1.6;
 			}
 		}
+		.row2__chapters {
+			.chapters__list {
+				display: grid;
+				gap: 0.4rem;
+				li {
+					position: relative;
+					display: flex;
+					justify-content: space-between;
+					padding: 0.6rem 1rem;
+					background-color: hsla(0, 0%, 55%, 0.05);
+					border-radius: 0.3rem;
+					.list__name {
+						display: flex;
+						gap: 0.9rem;
+						.volume {
+							font-weight: 600;
+							font-size: 0.9rem;
+							color: $text-secondary;
+						}
+						.name {
+							font-size: 0.8rem;
+						}
+					}
+					.list__create {
+						font-size: 0.7rem;
+						color: $text-secondary;
+					}
+				}
+			}
+		}
 	}
 }

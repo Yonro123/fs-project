@@ -102,3 +102,31 @@ body {
   font-weight: 400;
   line-height: 1.6;
 }
+.mangaElement__row2 .row2__chapters .chapters__list {
+  display: grid;
+  gap: 0.4rem;
+}
+.mangaElement__row2 .row2__chapters .chapters__list li {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+  background-color: hsla(0, 0%, 55%, 0.05);
+  border-radius: 0.3rem;
+}
+.mangaElement__row2 .row2__chapters .chapters__list li .list__name {
+  display: flex;
+  gap: 0.9rem;
+}
+.mangaElement__row2 .row2__chapters .chapters__list li .list__name .volume {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: hsla(0, 0%, 100%, 0.64);
+}
+.mangaElement__row2 .row2__chapters .chapters__list li .list__name .name {
+  font-size: 0.8rem;
+}
+.mangaElement__row2 .row2__chapters .chapters__list li .list__create {
+  font-size: 0.7rem;
+  color: hsla(0, 0%, 100%, 0.64);
+}

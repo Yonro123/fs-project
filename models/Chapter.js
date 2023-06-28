@@ -2,11 +2,16 @@ import { Schema, model } from "mongoose";
 
 const chapterSchema = new Schema(
 	{
-		idManga: String,
+		idManga: { type: Schema.Types.ObjectId, ref: "Manga" },
 		chapters: [
 			{
-				chapterName: String,
+				chapterNum: String,
 				chapterImage: [String],
+				volume: {
+					type: String,
+					default: 1,
+				},
+				createChapter: String,
 			},
 		],
 	},
