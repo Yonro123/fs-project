@@ -59,10 +59,11 @@
   margin-bottom: 1.2rem;
   text-align: end;
 }
-.login__form button {
+.login__form .login__send {
   padding: 0.6rem;
   margin-bottom: 1.2rem;
   color: #fff;
+  text-align: center;
   background-color: #1976d2;
   border: none;
   border-radius: 1.6rem;

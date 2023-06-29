@@ -1,5 +1,5 @@
 const image = document.querySelector(".containerWrapper");
-const btn = document.querySelector(".btnWrapper");
+const btn = document.querySelector(".btnImage");
 const imagesLength = btn.getAttribute("data-image");
 console.log(imagesLength);
 let query = window.location.search.substring(1);

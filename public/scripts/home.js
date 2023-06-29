@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	getManga().then((manga) => {
 		drawMangaCardSwiper(recommendedCards, manga, "recommen__card card");
 		const swiper = new Swiper(".mySwiper", {
-			slidesPerView: 11,
+			slidesPerView: 9.59,
 			freeMode: true,
 		});
 	});
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	getManga().then((manga) => {
 		drawMangaCardSwiper(hotNewsCards, manga, "hotnews__card card");
 		const swiper = new Swiper(".mySwiper2", {
-			slidesPerView: 7.3,
+			slidesPerView: 8,
 			freeMode: true,
 		});
 	});

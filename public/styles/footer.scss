@@ -1,0 +1,86 @@
+$cl-text-gray: hsla(0, 0%, 100%, 0.64);
+$cl-foot-hover: #1976d2;
+.footer {
+	padding: 40px 0;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+	}
+	&__content {
+		width: 240px;
+		.content__link {
+			margin-bottom: 0.8rem;
+			font-size: 1.2rem;
+			font-weight: 600;
+			line-height: 1.235;
+		}
+		p {
+			margin-bottom: 1rem;
+			font-size: 0.7rem;
+			line-height: 1.43;
+		}
+		span {
+			display: block;
+			margin-bottom: 0.2rem;
+			font-size: 0.6rem;
+			line-height: 1.66;
+			color: $cl-text-gray;
+		}
+		.content__question {
+			font-size: 0.7rem;
+		}
+		.content__question:hover {
+			color: $cl-foot-hover;
+		}
+	}
+	.foot {
+		width: 140px;
+		.foot__title {
+			margin-bottom: 0.8rem;
+			font-size: 0.75rem;
+			font-weight: 500;
+		}
+		.foot__list {
+			display: grid;
+			gap: 0.8rem;
+			font-size: 0.6rem;
+			line-height: 1.66;
+			color: $cl-text-gray;
+		}
+		.foot__list li:hover {
+			color: $cl-foot-hover;
+		}
+	}
+	&__info {
+		width: 260px;
+	}
+	&__contact {
+		width: 260px;
+		h3 {
+			margin-bottom: 1.6rem;
+			font-size: 0.75rem;
+			font-weight: 500;
+		}
+		p {
+			color: $cl-text-gray;
+			font-size: 0.6rem;
+		}
+	}
+	&__social {
+		display: flex;
+		flex-wrap: nowrap;
+		gap: 0.4rem;
+		margin-bottom: 0.8rem;
+		svg {
+			fill: currentColor;
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			font-size: 1.5rem;
+			transition: fill 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+			flex-shrink: 0;
+			user-select: none;
+		}
+	}
+}

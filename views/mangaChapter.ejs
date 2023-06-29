@@ -14,10 +14,12 @@
 		<div class="wrapper">
 			<div class="containerWrapper">
 				<img src="	<%= chapter.chapterData.chapterImage[chapter.page-1] %>" alt="">
-				<a class="btnWrapper" href="#" data-image="<%=JSON.stringify(chapter.chapterData.chapterImage.length)%>"></a>
+				<a class="btnImage btnWrapper" data-image="<%=JSON.stringify(chapter.chapterData.chapterImage.length)%>"></a>
 			</div>
 		</div>
-		<script defer src="/scripts/mangaChapter.js"></script>
+		<%- include("./partials/footer.ejs") %>
+			<%- include("partials/scripts.ejs") %>
+				<script defer src="/scripts/mangaChapter.js"></script>
 </body>
 
 </html>
