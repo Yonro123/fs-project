@@ -103,5 +103,38 @@ router.post("/:itemId/chapters", async (req, res) => {
 		res.status(400).json({ error: error.message });
 	}
 });
+router.put("/:itemId", async (req, res) => {
+	try {
+		const { itemId } = req.params;
+		const {
+			content,
+			image,
+			typeManga,
+			year,
+			status,
+			russianName,
+			englishName,
+		} = req.body || {};
+
+		await Manga.updateOne(
+			{ _id: itemId },
+			{
+				title: {
+					russianName,
+					englishName,
+				},
+				content,
+				image,
+				typeManga,
+				year,
+				status,
+			}
+		);
+
+		res.status(200).json({ result: "Manga change!" });
+	} catch (error) {
+		res.status(400).json({ error: error.message });
+	}
+});
 
 export default router;
