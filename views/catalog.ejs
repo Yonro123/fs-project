@@ -10,47 +10,46 @@
 </head>
 
 <body>
-	<%= console.log(manga) %>
-		<%- include("./partials/header.ejs") %>
-			<%- include("./partials/login.ejs") %>
-				<%- include("./partials/register.ejs") %>
-					<section class="catalog">
-						<div class="container">
-							<div class="catalog__container">
-								<h1 class="catalog__title">Каталог</h1>
-								<div class="catalog__row1">
-									<div class="catalog__cards">
-										<% for(elem of manga) { %>
-											<div class="catalog__card">
-												<div><img src="<%= elem.image %>"></div>
-												<span>
-													<%= elem.typeManga %>
-												</span>
-												<h3>
-													<%= elem.title.russianName %>
-												</h3>
-												<a class="btnWrapper" href="http://localhost:8080/manga/<%= elem._id %>"></a>
-											</div>
-											<% } %>
-									</div>
-									<div class="row1__buttuns">
-										<button class="btn__prev">&#60;</button>
-										<div class="catalog__buttons">
+	<%- include("./partials/header.ejs") %>
+		<%- include("./partials/login.ejs") %>
+			<%- include("./partials/register.ejs") %>
+				<section class="catalog">
+					<div class="container">
+						<div class="catalog__container">
+							<h1 class="catalog__title">Каталог</h1>
+							<div class="catalog__row1">
+								<div class="catalog__cards">
+									<% for(elem of manga) { %>
+										<div class="catalog__card">
+											<div><img src="<%= elem.image %>"></div>
+											<span>
+												<%= elem.typeManga %>
+											</span>
+											<h3>
+												<%= elem.title.russianName %>
+											</h3>
+											<a class="btnWrapper" href="http://localhost:8080/manga/<%= elem._id %>"></a>
 										</div>
-										<button class="btn__next">></button>
+										<% } %>
+								</div>
+								<div class="row1__buttuns">
+									<a class="btn__prev">&#60;</a>
+									<div class="catalog__buttons">
 									</div>
+									<a class="btn__next">></a>
+								</div>
 
-								</div>
-								<div class="catalog__row2">
-									<h2>Filter</h2>
-								</div>
+							</div>
+							<div class="catalog__row2">
+								<h2>Filter</h2>
 							</div>
 						</div>
-					</section>
+					</div>
+				</section>
 
-					<%- include("./partials/footer.ejs") %>
-						<%- include("./partials/scripts.ejs") %>
-							<script src="/scripts/catalog.js"></script>
+				<%- include("./partials/footer.ejs") %>
+					<%- include("./partials/scripts.ejs") %>
+						<script src="/scripts/catalog.js"></script>
 </body>
 
 </html>

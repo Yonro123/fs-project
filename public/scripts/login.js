@@ -15,7 +15,6 @@ const getUsers = async () => {
 const authUser = async () => {
 	const users = await getUsers();
 	for (const user of users) {
-		console.log(user);
 		if (
 			user.password === inpPassword.value &&
 			user.username === inpUserName.value
