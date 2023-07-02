@@ -58,5 +58,25 @@ router.get("/manga/:itemId/chapter", async (req, res) => {
 		},
 	});
 });
+router.get("/catalog", async (req, res) => {
+	const { limit, page } = req.query;
+
+	const offset = (page - 1) * limit;
+
+	const manga = await Manga.find(
+		{},
+		{
+			title: {
+				russianName: 1,
+			},
+			image: 1,
+			typeManga: 1,
+		}
+	)
+		.limit(limit)
+		.skip(offset);
+
+	res.render("catalog", { manga });
+});
 
 export default router;

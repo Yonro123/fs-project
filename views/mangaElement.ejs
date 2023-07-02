@@ -11,51 +11,55 @@
 
 <body>
 	<%- include("./partials/header.ejs") %>>
-		<div class="mangaElement">
-			<div class="container">
-				<div class="mangaElement__container">
-					<div class="mangaElement__row1">
-						<div class="row1__content">
-							<div class="row1__card">
-								<img src="<%= mangaElement.image %>" alt="">
-							</div>
-							<a href="#" class="row1__read btn">ЧИТАТЬ</a>
-							<a href="#" class="row1__addBookmark btn">ДОБАВИТЬ В ЗАКЛАДКИ</a>
-						</div>
-					</div>
-					<div class="mangaElement__row2">
-						<div class="row2__head">
-							<span class="row2__subtitle">
-								<%= mangaElement.title.englishName %> /
-									<%= mangaElement.title.otherName %>
-							</span>
-							<h3>
-								<%= mangaElement.title.russianName %><span>[<%= mangaElement.status %>]</span>
-							</h3>
-							<div class="row2__rating">
-								<div class="rating__type">
-									<%= mangaElement.typeManga %>
-								</div>
-								<div class="rating__year">
-									<%= mangaElement.year %>
+		<%- include("./partials/login.ejs") %>
+			<%- include("./partials/register.ejs") %>
+				<div class="mangaElement">
+					<div class="container">
+						<div class="mangaElement__container">
+							<div class="mangaElement__row1">
+								<div class="row1__content">
+									<div class="row1__card">
+										<img src="<%= mangaElement.image %>" alt="">
+									</div>
+									<a href="#" class="row1__read btn">ЧИТАТЬ</a>
+									<a href="#" class="row1__addBookmark btn">ДОБАВИТЬ В ЗАКЛАДКИ</a>
 								</div>
 							</div>
-						</div>
-						<div class="row2__content">
-							<div class="row2__description">
-								<ul class="row2__menu">
-									<li class="row2__link">ОПИСАНИЕ<a></a></li>
-									<li>ГЛАВЫ<a href="/manga/<%= mangaElement.id%>/chapters"></a></li>
-								</ul>
-								<div class="row2__text">
-									<%= mangaElement.content %>
+							<div class="mangaElement__row2">
+								<div class="row2__head">
+									<span class="row2__subtitle">
+										<%= mangaElement.title.englishName %> /
+											<%= mangaElement.title.otherName %>
+									</span>
+									<h3>
+										<%= mangaElement.title.russianName %><span>[<%= mangaElement.status %>]</span>
+									</h3>
+									<div class="row2__rating">
+										<div class="rating__type">
+											<%= mangaElement.typeManga %>
+										</div>
+										<div class="rating__year">
+											<%= mangaElement.year %>
+										</div>
+									</div>
+								</div>
+								<div class="row2__content">
+									<div class="row2__description">
+										<ul class="row2__menu">
+											<li class="row2__link">ОПИСАНИЕ<a></a></li>
+											<li>ГЛАВЫ<a href="/manga/<%= mangaElement.id%>/chapters"></a></li>
+										</ul>
+										<div class="row2__text">
+											<%= mangaElement.content %>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+				<%- include("./partials/footer.ejs") %>
+					<%- include("partials/scripts.ejs") %>
 </body>
 
 </html>

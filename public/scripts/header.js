@@ -11,6 +11,8 @@ const btnRegister = document.querySelector(".btnForReg");
 const btnLogin = document.querySelector(".btnForLog");
 const closeRegModal = document.querySelector(".register__container");
 const closeLogModal = document.querySelector(".login__container");
+const profileImage = document.querySelector(".header__profile");
+
 if (!user) {
 	headerBtn.addEventListener("click", () => {
 		if (headerBtn.classList.contains("login__auth")) {
@@ -39,7 +41,13 @@ if (!user) {
 }
 
 if (user) {
-	headerBtn.addEventListener("click", () => {
-		localStorage.removeItem("user");
+	profileImage.addEventListener("click", () => {
+		const userData = JSON.parse(localStorage.getItem("user"));
+		const boxSwipe = document.querySelector(".menu__swipe");
+		const username = boxSwipe.querySelector(".list__1 h6");
+		const userImage = boxSwipe.querySelector(".list__1 img");
+		userImage.src = `${userData.avatar}`;
+		username.textContent = `${userData.username}`;
+		boxSwipe.classList.toggle("active__swipe");
 	});
 }

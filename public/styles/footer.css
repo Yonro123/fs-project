@@ -1,0 +1,86 @@
+.footer {
+  padding: 40px 0;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.footer__content {
+  width: 240px;
+}
+.footer__content .content__link {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.235;
+}
+.footer__content p {
+  margin-bottom: 1rem;
+  font-size: 0.7rem;
+  line-height: 1.43;
+}
+.footer__content span {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-size: 0.6rem;
+  line-height: 1.66;
+  color: hsla(0, 0%, 100%, 0.64);
+}
+.footer__content .content__question {
+  font-size: 0.7rem;
+}
+.footer__content .content__question:hover {
+  color: #1976d2;
+}
+.footer .foot {
+  width: 140px;
+}
+.footer .foot .foot__title {
+  margin-bottom: 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.footer .foot .foot__list {
+  display: grid;
+  gap: 0.8rem;
+  font-size: 0.6rem;
+  line-height: 1.66;
+  color: hsla(0, 0%, 100%, 0.64);
+}
+.footer .foot .foot__list li:hover {
+  color: #1976d2;
+}
+.footer__info {
+  width: 260px;
+}
+.footer__contact {
+  width: 260px;
+}
+.footer__contact h3 {
+  margin-bottom: 1.6rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.footer__contact p {
+  color: hsla(0, 0%, 100%, 0.64);
+  font-size: 0.6rem;
+}
+.footer__social {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.4rem;
+  margin-bottom: 0.8rem;
+}
+.footer__social svg {
+  fill: currentColor;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  font-size: 1.5rem;
+  transition: fill 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}

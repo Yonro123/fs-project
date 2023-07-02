@@ -59,10 +59,11 @@ $cl-foot-hover: #1976d2;
 			margin-bottom: 1.2rem;
 			text-align: end;
 		}
-		button {
+		.login__send {
 			padding: 0.6rem;
 			margin-bottom: 1.2rem;
 			color: #fff;
+			text-align: center;
 			background-color: $cl-foot-hover;
 			border: none;
 			border-radius: 1.6rem;
