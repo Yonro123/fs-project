@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<%- include("./partials/head.ejs") %>
-		<link rel="stylesheet" href="/styles/mangaChapter.css">
+		<link rel="stylesheet" href="/styles/css/mangaChapter.css">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
 			<%- include("./partials/register.ejs") %>e
 				<div class="wrapper">
 					<div class="containerWrapper">
-						<img src="	<%= chapter.chapterData.chapterImage[chapter.page-1] %>" alt="">
+						<img src="<%= chapter.chapterData.chapterImage[chapter.page-1] %>" alt="">
 						<a class="btnImage btnWrapper"
 							data-image="<%=JSON.stringify(chapter.chapterData.chapterImage.length)%>"></a>
 					</div>

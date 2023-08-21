@@ -94,6 +94,7 @@
   gap: 1.6rem;
 }
 .content__latestupdates .latestupdates__cards .latestupdates__card {
+  position: relative;
   display: grid;
   grid-template-columns: max-content 1fr;
   grid-template-rows: max-content max-content;
