@@ -86,6 +86,7 @@ $cl-foot-hover: #1976d2;
 			display: grid;
 			gap: 1.6rem;
 			.latestupdates__card {
+				position: relative;
 				display: grid;
 				grid-template-columns: max-content 1fr;
 				grid-template-rows: max-content max-content;

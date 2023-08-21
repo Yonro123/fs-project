@@ -23,6 +23,7 @@ const authUser = async () => {
         "user",
         JSON.stringify({
           avatar: user.avatar,
+          username: user.username,
           id: user._id,
         })
       );
